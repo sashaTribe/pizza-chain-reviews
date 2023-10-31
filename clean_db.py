@@ -4,7 +4,8 @@ try:
     connection_obj = sqlite3.connect('pizza_chain.db')
     cur = connection_obj.cursor()
     cur.execute("SELECT COUNT (*) FROM Customer_reviews")
-    connection_obj.commit()
+    result = cur.fetchone()
+    print(result)
     print("Submitted Command")
     connection_obj.close()
 except sqlite3.Error as error:
