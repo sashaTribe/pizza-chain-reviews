@@ -66,7 +66,7 @@ def fetch_from_trustpilot(company_name, first_page_num, final_page_num):
     review_text = []
     stars_number = []
 
-    for i in range(start_page,end_page):
+    for i in range(first_page_num,final_page_num):
         response = requests.get(f'https://www.trustpilot.com/review/{company_name}?page={i}')
         try:
             if response.status_code == 200:
@@ -81,14 +81,14 @@ def fetch_from_trustpilot(company_name, first_page_num, final_page_num):
                     stars_tag = review.find('img')
 
                     review_titles.append(title_tag.text)
-                    review_text.append(text_tag)
+                    review_text.append(text_tag.text)
                     stars_number.append(stars_tag.get('alt'))
-                    date_list.append(time_tag)
+                    date_list.append(time_tag.text)
         except ConnectionError:
             print("Error fetching data")
     return review_titles, review_text, stars_number, date_list
 
-def create_data_frame(titles,reviews,dates, ratings):
+def create_data_frame(titles,reviews,ratings,dates):
     dict = {'Title of Review': titles, 'Review Description': reviews, 
             'Date of Review': dates, 'No. of stars': ratings}
     return pd.DataFrame.from_dict(dict)
