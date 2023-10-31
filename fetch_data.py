@@ -88,5 +88,8 @@ def fetch_from_trustpilot(company_name, first_page_num, final_page_num):
             print("Error fetching data")
     return review_titles, review_text, stars_number, date_list
 
-def create_dictionary():
-    print('ji')
+def create_data_frame(titles,reviews,dates, ratings):
+    dict = {'Title of Review': titles, 'Review Description': reviews, 
+            'Date of Review': dates, 'No. of stars': ratings}
+    return pd.DataFrame.from_dict(dict)
+
