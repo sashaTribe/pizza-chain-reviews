@@ -1,6 +1,9 @@
 import sqlite3, csv
-from create_datasets import FILE_NAMES
+# The FILE_NAMES hold all the names of the data frames
+from build_dataset.create_datasets import FILE_NAMES
 
+# Connects sqlite database and combines all the data frames created
+# from build_dataset onto an sql database
 try:
     con = sqlite3.connect("pizza_chain.db")
     cur = con.cursor()

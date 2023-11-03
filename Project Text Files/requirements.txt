@@ -2,3 +2,5 @@ seaborn
 matplotlib
 pandas
 nltk
+sqlite3
+csv

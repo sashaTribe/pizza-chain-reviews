@@ -2,11 +2,17 @@ from fetch_data import fetch_from_trustpilot, create_data_frame
 import pandas as pd
 import csv
 
+# list of websites of representing different pizza chains
 CHAIN_LIST = ['www.prezzorestaurants.co.uk','www.zizzi.co.uk','francomanca.co.uk','www.pizzaexpress.com']
+# list of file names I want certain data to be saved to
 FILE_NAMES = ['prezzo_df.csv', 'zizzi_df.csv', 'fm_df.csv', 'pizza_express_df.csv']
+# Companies I am analysing (or want to analyse)
 COMPANY_LIST = ['Prezzo', 'Zizzi', 'Franco Manca', ' Pizza Express']
-
+ 
+# creates a data frame for every pizza chain the lists above then saves to
+# a file.
 def make_df_files():
+    # only taking 12 pages worth of reviews into account
     START_PAGE = 1
     END_PAGE  = 12
     df_list = []

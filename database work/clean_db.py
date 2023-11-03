@@ -1,5 +1,7 @@
 import sqlite3
 
+
+# This was me playing around attempting to build a new table, please ignore
 try:
     connection_obj = sqlite3.connect('pizza_chain.db')
     cur = connection_obj.cursor()
