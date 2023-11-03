@@ -61,10 +61,22 @@ Then you can go straight to [the notebook](pizza-chain-reviews/notebook_pizza)
         - This will help them have a good understanding of how they are doing now as a restaurant chain
 
 1. Load the data from csv file then transform the data onto my query editor
-    - remove any nulls
+    - Imported 4 different csv files:
+        - prezzo_data.csv
+        - pos_freq_df
+        - neu_freq_df
+        - neg_freq_df
+    - Removed any nulls
     - Changed 'Date of Review' to Date type
-    - broke the table down into 'Date of Review', 'Sentiment Level' and 'Ratings'
+    - Broke the table down into 'Date of Review', 'Sentiment Level' and 'Ratings' and called this table *Date vs Sentiment*
     - 
+
+2. Built a line chart showing the trends of the different types of ratings over two years
+
+3. For the rest of the tables I created a word cloud and a word distribution bar plot
+
+4. Created a page showing the same graphs but for different semantic types: 
+
 
 
 
