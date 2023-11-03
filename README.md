@@ -30,11 +30,18 @@ Analysing customer reviews for sentimental analysis between different pizza chai
 
 What is already provided for you:
 - All the data frames are in [df_files](/df_files/)
+- There are several directories
+    - final_pizza_chain_dfs
+    - original_pizza_chain_dfs
+    - prezzo_semantics
 - If you want to run all of them, on the terminal run: 
 
-    python /build_dataset/create_datasets.py
+    python build_dataset/create_datasets.py
 
-Then you can go straight to [the notebook](pizza-chain-reviews/notebook_pizza)
+Then you can go straight to [the notebook](pizza-chain-reviews/notebook_pizza) and press "Play All"
+- The datasets you need would be the ones in 
+    - final_pizza_chain_dfs
+    - prezzo_semantics (would be one for other pizza chains soon)
 
 ## The workflow
 
@@ -98,7 +105,7 @@ Then you can go straight to [the notebook](pizza-chain-reviews/notebook_pizza)
 - I struggled with coming up with ways to showcase sentimental analysis
 - I struggled to load everything to SQL and use SQL
     -  I wanted to use SQL because it takes longer to fetch some data from a Pandas dataframe than SQL, hence I wanted to use SQL to clean and load my data properly
-- NLTK was tricky, might have overcomplicated the problem trying to use NLTK's sentimental analysis instead of sticking to the what the ratings shows from the beginning
+- NLTK was tricky, might have overcomplicated the problem trying to use NLTK's sentimental analysis polarity instead of sticking to the what the ratings shows from the beginning. However it would be useful for my future state in predicting the sentiment of the rating.
 
 
 ## The Future State
