@@ -54,7 +54,17 @@ Then you can go straight to [the notebook](pizza-chain-reviews/notebook_pizza)
 
 ### Power BI 
 
+- The graphs I wanted to build for the client:
+    - A word cloud: so they can get a gist of common words on a certain type of review
+    - A frequency bar plot: so they know how often that particular word pops up and understand if that is a pending issue
+    - A line graph: A line graph showing the frequency of the different types of ratings over time
+        - This will help them have a good understanding of how they are doing now as a restaurant chain
 
+1. Load the data from csv file then transform the data onto my query editor
+    - remove any nulls
+    - Changed 'Date of Review' to Date type
+    - broke the table down into 'Date of Review', 'Sentiment Level' and 'Ratings'
+    - 
 
 
 
