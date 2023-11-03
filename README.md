@@ -1,4 +1,16 @@
 # Pizza-Chain-Reviews
+#### Author: Alexandra (Sasha) Tribe
+
+## Table of Contents :)
+- [Description](#description)
+- [Technologies Used](#technologies-used)
+- [The workflow](#the-workflow)
+    - [Python](#python)
+    - [Power BI](#power-bi)
+- [What I struggled with](#what-I-struggled-with)
+- [The Future State](#the-future-state)
+- [Acknowledgements](#acknowledgments)
+
 
 ## Description
 Analysing customer reviews for sentimental analysis between different pizza chains. The audience are the owners of those food chains so they can see what is going well and what is not going well and what their competitors are like.
@@ -25,6 +37,8 @@ What is already provided for you:
 Then you can go straight to [the notebook](pizza-chain-reviews/notebook_pizza)
 
 ## The workflow
+
+### Python
 
 1. Web scrape data from f'https://www.trustpilot.com/review/www.prezzorestaurants.co.uk?page={i}'
     - i representing the page
@@ -77,6 +91,22 @@ Then you can go straight to [the notebook](pizza-chain-reviews/notebook_pizza)
 
 4. Created a page showing the same graphs but for different semantic types: 
 
+![Power Bi Example](/Images/power_bi_ex.png)
 
 
+## What I struggled with:
+- I struggled with coming up with ways to showcase sentimental analysis
+- I struggled to load everything to SQL and use SQL
+    -  I wanted to use SQL because it takes longer to fetch some data from a Pandas dataframe than SQL, hence I wanted to use SQL to clean and load my data properly
+- NLTK was tricky, might have overcomplicated the problem trying to use NLTK's sentimental analysis instead of sticking to the what the ratings shows from the beginning
 
+
+## The Future State
+- Applying these methods to all the data frames/ companies
+    - Then create a graph to compare each company as competitors
+- Create an airflow to manage the pipeline better and help make the flow of data more automated
+- For the long future:
+    - **Would be fantastic to build a web scraper pipeline where it fetches the most recent review and guesses its semantic tone without taking in the ratings to save resources**
+
+## Acknowledgement
+- Thank you to Xander Talent peer for the moral support
