@@ -5,7 +5,7 @@ import csv
 # list of websites of representing different pizza chains
 CHAIN_LIST = ['www.prezzorestaurants.co.uk','www.zizzi.co.uk','francomanca.co.uk','www.pizzaexpress.com']
 # list of file names I want certain data to be saved to
-FILE_NAMES = ['prezzo_df.csv', 'zizzi_df.csv', 'fm_df.csv', 'pizza_express_df.csv']
+FILE_NAMES = ['df_files/prezzo_df.csv', 'df_files/zizzi_df.csv', 'df_files/fm_df.csv', 'df_files/pizza_express_df.csv']
 # Companies I am analysing (or want to analyse)
 COMPANY_LIST = ['Prezzo', 'Zizzi', 'Franco Manca', ' Pizza Express']
  
